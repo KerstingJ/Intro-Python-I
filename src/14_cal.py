@@ -22,3 +22,27 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def cal():
+    date = datetime.now().date()
+
+    if len(sys.argv) == 2:
+        month = sys.argv[1]
+        year = date.year
+    elif len(sys.argv) >= 3:
+        month = sys.argv[1]
+        year = sys.argv[2]
+    else:
+        month = date.month
+        year = date.year
+
+    try:
+        textCal = calendar.TextCalendar(0)
+        textCal.prmonth(int(year), int(month))
+    except:
+        print(
+            "\ncal expects input in the form of\n14_cal.py month [year]\nwith blank arguments being substituted for the current date\n")
+
+
+cal()
