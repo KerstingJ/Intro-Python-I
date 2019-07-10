@@ -42,7 +42,10 @@ def cal():
         textCal.prmonth(int(year), int(month))
     except:
         print(
-            "\ncal expects input in the form of\n14_cal.py month [year]\nwith blank arguments being substituted for the current date\n")
+            "\ncal expects input in the form of" +
+            "\n14_cal.py month [year]" +
+            "\nwith blank arguments being substituted for the current date\n"
+        )
 
 
 cal()
